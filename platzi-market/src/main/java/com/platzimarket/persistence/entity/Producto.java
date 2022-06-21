@@ -1,6 +1,7 @@
 package com.platzimarket.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "productos")
@@ -26,6 +27,11 @@ public class Producto {
     private Integer cantidadStock;
 
     private Boolean estado;
+
+    @ManyToMany
+    @JoinColumn(name = "id_categoria",insertable = false,updatable = false)
+    private Categoria categoria;
+
 
     public Integer getIdproducto() {
         return idproducto;

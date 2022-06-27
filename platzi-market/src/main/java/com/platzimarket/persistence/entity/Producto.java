@@ -1,7 +1,6 @@
 package com.platzimarket.persistence.entity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "productos")
@@ -10,7 +9,7 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
-    public Integer idProducto;
+    private Integer idProducto;
 
     private String nombre;
 
@@ -28,17 +27,16 @@ public class Producto {
 
     private Boolean estado;
 
-    @ManyToMany
-    @JoinColumn(name = "id_categoria",insertable = false,updatable = false)
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
 
-
-    public Integer getIdproducto() {
+    public Integer getIdProducto() {
         return idProducto;
     }
 
-    public void setIdproducto(Integer idproducto) {
-        this.idProducto = idproducto;
+    public void setIdProducto(Integer idProducto) {
+        this.idProducto = idProducto;
     }
 
     public String getNombre() {

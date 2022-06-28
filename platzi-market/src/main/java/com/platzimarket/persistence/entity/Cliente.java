@@ -14,7 +14,7 @@ public class Cliente {
 
     private String apellido;
 
-    private Long celular;
+    private Integer celular;
 
     private String direccion;
 
@@ -48,11 +48,11 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public Long getCelular() {
+    public Integer getCelular() {
         return celular;
     }
 
-    public void setCelular(Long celular) {
+    public void setCelular(Integer celular) {
         this.celular = celular;
     }
 

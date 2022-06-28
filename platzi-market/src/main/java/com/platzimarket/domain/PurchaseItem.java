@@ -1,5 +1,4 @@
 package com.platzimarket.domain;
-
 public class PurchaseItem {
     private int productId;
     private int quantity;

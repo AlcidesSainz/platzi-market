@@ -1,6 +1,5 @@
 package com.platzimarket.domain;
 
-import com.platzimarket.persistence.entity.Categoria;
 
 public class Product {
     private int productId;

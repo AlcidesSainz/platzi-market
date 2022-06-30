@@ -22,15 +22,14 @@ public class Compra {
     private String medioPago;
 
     private String comentario;
-
     private String estado;
 
     @ManyToOne
-    @JoinColumn(name = "id_cliente",insertable = false,updatable = false)
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "compra",cascade = {CascadeType.ALL})
-    private List<ComprasProducto>productos;
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
+    private List<ComprasProducto> productos;
 
     public Integer getIdCompra() {
         return idCompra;
@@ -95,5 +94,4 @@ public class Compra {
     public void setProductos(List<ComprasProducto> productos) {
         this.productos = productos;
     }
-
 }
